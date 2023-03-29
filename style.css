@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
+
+:root {
+  --glow-color: hsl(186 100% 69%);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #d1d1d1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+body{
+    background: rgba(19, 19, 19, 0.644);
+    background-image: url("b.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Courier Prime', monospace;}
+.body-contain{
+    display: flex;
+    height: 85vh; 
+    width: 90vw;
+    box-sizing: border-box;
+    margin: 3rem auto;
+    align-self: center;
+   border-radius: 20px;
+   overflow-y: auto;
+  cursor: pointer;
+  background: rgba(255,255,255,0.15);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255,255,255,0.075);
+}
+
+.body-contain::before {
+  position: sticky;
+  content: "ASK YOUR PERSONALITY !!!";
+  width: 100%;
+  height:40px;
+  border-radius:3px ;
+  position: absolute;
+  top: 0px;
+  left:50%;
+  transform: translate(-50%,0%);
+  background: var(--glow-color);
+  pointer-events: none;
+  text-align: center;
+  padding: 1% 0px;
+  border-bottom: 2px solid rgb(0, 0, 63);
+  font-weight: 700;
+}
+
+
+
+.quiz-container {
+    max-width: 60rem;
+    min-height: 20rem;
+    margin: auto ;
+    text-align: center;
+    padding: 20px;
+    align-self: center;
+  }
+  
+  .question {
+    font-size: 24px;
+    font-weight:500;
+    margin-top: 30px ;
+    margin-bottom: 2px;
+    width: 100%;
+    text-align: left;
+    color: #f2f2f2;
+  }
+  
+  .choices {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+
+  }
+  
+  .choice {
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    
+    transition: background-color 0.3s ease;
+  }
+  
+  .choice:hover {
+    background-color: #ccc;
+  }
+  
+  .button-style{    
+    text-align: left;
+    margin: 10px ;
+    min-height: 3rem;
+    padding: 15px 15px;
+    color: #f2f2f2;
+    cursor: pointer;
+    border: 0.15em solid var(--glow-color);
+    border-radius: 0.45em;
+    background: none;
+    font-weight: normal;
+    perspective: 2em;
+    -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+      0px 0px 0.5em 0px var(--glow-color);
+    -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+      0px 0px 0.5em 0px var(--glow-color);
+    box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+      0px 0px 0.5em 0px var(--glow-color);
+      font-family: 'Courier Prime', monospace;
+  }
+
+  .button-style1{
+    height: 3rem;
+    width: 7rem;
+    color: #d1d1d1;
+    background-color: transparent;
+    border: 0.15em solid var(--glow-color);
+    border-radius: 10px;
+    /* background: none; */
+    font-weight:500;
+    margin: 2rem 0;
+    perspective: 2em;
+    -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+      0px 0px 0.5em 0px var(--glow-color);
+    -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+      0px 0px 0.5em 0px var(--glow-color);
+    box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+      0px 0px 0.5em 0px var(--glow-color);
+      font-family: 'Courier Prime', monospace;
+
+  }
+
+  img{
+    width: 30px;
+  }
+
+  .button-style1:hover{
+    background-color: var(--glow-color);
+    cursor: pointer;
+    color: #555;
+  }
+
+  .button-style:hover{
+    background-color: var(--glow-color);  
+    
+  }
+
+
+ .button-style:hover {
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: none;
+    background-color: var(--glow-color);  
+    font-weight: bolder;
+    font-family: 'Courier Prime', monospace;
+  }
+
+  
+
+
+.end-button{
+  text-align: left;
+    margin: 10px ;
+    min-height: 3rem;
+    padding: 15px 15px;
+    color: #f2f2f2;
+    cursor: pointer;
+    border: 0.15em solid var(--glow-color);
+    border-radius: 0.45em;
+    background: none;
+    font-weight: normal;
+    perspective: 2em;
+    -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+      0px 0px 0.5em 0px var(--glow-color);
+    -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+      0px 0px 0.5em 0px var(--glow-color);
+    box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+      0px 0px 0.5em 0px var(--glow-color);
+      font-family: 'Courier Prime', monospace;
+}
+
+.end-button:hover{
+  color: rgba(0, 0, 0, 0.8);
+    text-shadow: none;
+    background-color: var(--glow-color);  
+    font-weight: bolder;
+    font-family: 'Courier Prime', monospace;
+}
+
+h2{
+  color: white;
+}
+
+
+.textbox{
+  text-align: left;
+  margin: 20px ;
+  min-height: 3rem;
+  padding: 15px 15px;
+  color: #f2f2f2;
+  border: 0.15em solid var(--glow-color);
+  border-radius: 0.45em;
+  background: none;
+  font-weight: normal;
+  perspective: 2em;
+  width: 100%;
+  -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+    font-family: 'Courier Prime', monospace;
+}
